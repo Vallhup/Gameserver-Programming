@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{f2f99c41-adf8-40c5-beff-9db1e92da68e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{d60c4bb2-fba4-4200-a5f2-a8c1b56abafd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Quest">
+      <UniqueIdentifier>{ae24ae75-f6f1-4811-97b5-9d00841d2bbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Session">
+      <UniqueIdentifier>{4b183168-28b8-46d9-bc39-05a468ce6540}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{43e27397-d802-43e7-92c6-21154ff2aee1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{8f00db7c-a363-4908-924e-d845fd125e92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{93603100-c8ba-4228-a5cc-74e236b8d22c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\View">
+      <UniqueIdentifier>{73d13be4-327f-47f2-8ffd-582aa53fbd9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algorithm">
+      <UniqueIdentifier>{ff57534c-a1ab-4e64-a038-627be988469e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\pch">
+      <UniqueIdentifier>{2edb636c-24cb-43f4-810b-30c51c297a58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Protocol">
+      <UniqueIdentifier>{d5069ea2-6c20-4727-aff8-32501eb69dce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Party">
+      <UniqueIdentifier>{d16be856-a751-48f6-818a-86b96e57ef58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Item">
+      <UniqueIdentifier>{4e2abd4b-b099-4902-986d-e0f59b359486}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object">
+      <UniqueIdentifier>{3f23feae-9734-4019-9710-1114d28c3704}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ChatManager.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpOver.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Listener.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="IocpCore.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestType.cpp">
+      <Filter>Game\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestManager.cpp">
+      <Filter>Game\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="Quest.cpp">
+      <Filter>Game\Quest</Filter>
+    </ClCompile>
+    <ClCompile Include="RecvBuffer.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Session.cpp">
+      <Filter>Game\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="Service.cpp">
+      <Filter>Game\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="Sector.cpp">
+      <Filter>Game\View</Filter>
+    </ClCompile>
+    <ClCompile Include="AStar.cpp">
+      <Filter>Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="CorePch.cpp">
+      <Filter>Core\pch</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Core\pch</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketFactory.cpp">
+      <Filter>Game\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="Party.cpp">
+      <Filter>Game\Party</Filter>
+    </ClCompile>
+    <ClCompile Include="PartyManager.cpp">
+      <Filter>Game\Party</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Game\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemManager.cpp">
+      <Filter>Game\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Game\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>Game\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewManager.cpp">
+      <Filter>Game\View</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterBehavior.cpp">
+      <Filter>Game\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CombatManager.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="DBManager.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Game\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Npc.cpp">
+      <Filter>Game\Object</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AtomicQueue.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatManager.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpOver.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Listener.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="IocpCore.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Macro.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Quest.h">
+      <Filter>Game\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestType.h">
+      <Filter>Game\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestManager.h">
+      <Filter>Game\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="RecvBuffer.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Service.h">
+      <Filter>Game\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="Session.h">
+      <Filter>Game\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="Sector.h">
+      <Filter>Game\View</Filter>
+    </ClInclude>
+    <ClInclude Include="AStar.h">
+      <Filter>Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="CorePch.h">
+      <Filter>Core\pch</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Core\pch</Filter>
+    </ClInclude>
+    <ClInclude Include="protocol.h">
+      <Filter>Game\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketFactory.h">
+      <Filter>Game\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="Party.h">
+      <Filter>Game\Party</Filter>
+    </ClInclude>
+    <ClInclude Include="PartyManager.h">
+      <Filter>Game\Party</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Game\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemManager.h">
+      <Filter>Game\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Game\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>Game\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewManager.h">
+      <Filter>Game\View</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterBehavior.h">
+      <Filter>Game\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CombatManager.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="DBManager.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Game\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Npc.h">
+      <Filter>Game\Object</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="monster_spawn.lua">
+      <Filter>Script</Filter>
+    </None>
+  </ItemGroup>
+</Project>
