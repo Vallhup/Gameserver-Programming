@@ -5,7 +5,7 @@ int main()
 {
 	setlocale(LC_ALL, "korean");
 
-	Logger::Init("", "C:/Users/Hadenpel/Desktop/GSPG/SERVER/ServerCore/");
+	Logger::Init();
 	Logger::SetLevel(LogLevel::Error);
 
 	IocpCorePtr iocpCore = std::make_shared<IocpCore>();
