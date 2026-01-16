@@ -66,8 +66,6 @@ bool DBManager::CheckUserID(const std::wstring& userID)
         return false;
     }
 
-    //SQLSetStmtAttr(hStmt, SQL_ATTR_CURSOR_TYPE, (SQLPOINTER)SQL_CURSOR_STATIC, 0);
-
     // 2. Query 실행
     std::wstring query = L"EXEC select_user_id " + userID;
     retcode = SQLExecDirect(hStmt, (SQLWCHAR*)query.c_str(), SQL_NTS);
@@ -284,8 +282,6 @@ bool DBManager::UserUseItem(int userId, int itemId, int count)
         LOG_INF("[DBManager] SQLAllocHandle STMT Failed");
         return false;
     }
-
-    //SQLSetStmtAttr(hStmt, SQL_ATTR_CURSOR_TYPE, (SQLPOINTER)SQL_CURSOR_STATIC, 0);
 
     // 2. Query 실행
     std::wstring query =

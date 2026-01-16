@@ -313,7 +313,7 @@ void Service::OnPlayerDeath(const std::shared_ptr<GameSession>& session)
 void Service::OnPlayerRevive(const std::shared_ptr<GameSession>& session)
 {
 	// temp : 성능 테스트 할 때 부활 장소가 고정되어 있으니까 너무 빡셈
-	while (true) {
+	/*while (true) {
 		short x = rand() % 2000;
 		short y = rand() % 2000;
 
@@ -322,7 +322,7 @@ void Service::OnPlayerRevive(const std::shared_ptr<GameSession>& session)
 			session->Send(PacketFactory::BuildMovePacket(*session));
 			break;
 		}
-	}
+	}*/
 
 	_viewManager->HandlePlayerReviveNotify(session);
 }

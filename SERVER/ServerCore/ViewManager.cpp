@@ -118,7 +118,7 @@ void ViewManager::HandlePlayerMoveNotify(const std::shared_ptr<GameSession>& ses
 		return;
 	}
 
-	// 1. Login한 Player의 시야에 걸리는 Sector Range
+	// 1. Move한 Player의 시야에 걸리는 Sector Range
 	auto [xRange, yRange] = Sector::GetSectorRange(session->GetX(), session->GetY());
 
 	// 2. 해당 Sector 내부의 NPC WakeUp

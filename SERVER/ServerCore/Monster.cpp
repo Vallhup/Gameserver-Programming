@@ -247,12 +247,12 @@ void Monster::Dispatch(ExpOver* expOver, int numBytes)
 	switch (expOver->_operationType) {
 	case NpcMove:
 		OnMove();
-		delete reinterpret_cast<EventOver*>(expOver);
+		delete static_cast<EventOver*>(expOver);
 		break;
 
 	case NpcHeal:
 		OnHeal();
-		delete reinterpret_cast<EventOver*>(expOver);
+		delete static_cast<EventOver*>(expOver);
 		break;
 
 	default:

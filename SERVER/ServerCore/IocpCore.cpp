@@ -30,34 +30,6 @@ bool IocpCore::Register(std::shared_ptr<IocpObject> iocpObject)
 
 bool IocpCore::Dispatch(unsigned int timeoutMs)
 {
-	/*DWORD ioSize{ 0 };
-	ULONG_PTR key{ 0 };
-	ExpOver* expOver{ nullptr };
-
-	BOOL result = GetQueuedCompletionStatus(_iocpHandle, &ioSize, &key, reinterpret_cast<LPOVERLAPPED*>(&expOver), timeoutMs);
-	if ((not result) and (WAIT_TIMEOUT == WSAGetLastError())) {
-		LOG_DBG("Dispatch timeout");
-		return true;
-	}
-
-	if (nullptr == expOver) {
-		LOG_WRN("Dispatch received shutdown signal");
-		SetLastError(ERROR_OPERATION_ABORTED);
-		return false;
-	}
-
-	std::shared_ptr<IocpObject> iocpObject = expOver->_owner;
-	if (nullptr == iocpObject) {
-		LOG_ERR("ExpOver has no owner");
-		delete expOver;
-		return false;
-	}
-
-	LOG_DBG("Dispatch success: key=%11u", (unsigned long long)key);
-	iocpObject->Dispatch(expOver, ioSize);
-
-	return true;*/
-
 	const ULONG maxEntry{ 32 };
 	std::array<OVERLAPPED_ENTRY, maxEntry> entries;
 	ULONG numEntries{ 0 };
@@ -77,7 +49,7 @@ bool IocpCore::Dispatch(unsigned int timeoutMs)
 	}
 
 	for (ULONG i = 0; i < numEntries; ++i) {
-		ExpOver* expOver = reinterpret_cast<ExpOver*>(entries[i].lpOverlapped);
+		ExpOver* expOver = static_cast<ExpOver*>(entries[i].lpOverlapped);
 		ULONG_PTR key = entries[i].lpCompletionKey;
 		DWORD ioSize = entries[i].dwNumberOfBytesTransferred;
 
